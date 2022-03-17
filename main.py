@@ -1,9 +1,5 @@
 import re
-import itertools
 import os 
-import csv
-from random import random
-import discord
 from discord.ext import commands
 import time
 
