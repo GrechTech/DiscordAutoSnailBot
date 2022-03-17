@@ -3,11 +3,11 @@ import os
 from discord.ext import commands
 import time
 
-#Config constants
+# Config constants
 TOKEN = ""
 TriggerDays = 3
 
-#Working directory
+# Working directory
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 URLS_PATH = os.path.join(DIR_PATH,"urls.txt")
 
@@ -18,7 +18,7 @@ def FindURL(string):
     return [x[0] for x in url]
 
 
-#Discord functionality
+# Discord functionality
 def check_reply(message):
     if message.reference is not None and message.is_system :
         print(message.reference)
@@ -74,5 +74,5 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
-#Start
+# Start
 bot.run(TOKEN)
